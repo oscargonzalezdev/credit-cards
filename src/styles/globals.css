@@ -1,12 +1,52 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Tailwind Theme Customization - https://tailwindcss.com/docs/theme */
+@theme inline {
+  /* Fonts */
+  --font-montserrat: var(--font-montserrat);
+  --font-nunito: var(--font-nunito);
+
+  /* Colors */
+  --color-background: rgb(250, 248, 248);
+  --color-background-muted: rgb(249, 248, 254);
+  --color-foreground: rgb(8, 5, 28);
+  --color-foreground-muted: rgb(58, 56, 75);
+  --color-primary: rgb(244, 238, 34);
+  --color-primary-foreground: rgb(8, 5, 28);
+  --color-primary-muted: rgb(252, 251, 200);
+  --color-primary-muted-foreground: rgb(8, 5, 28);
+  --color-secondary: rgb(38, 26, 145);
+  --color-secondary-foreground: rgb(255, 255, 255);
+  --color-secondary-muted: rgb(214, 216, 240);
+  --color-secondary-muted-foreground: rgb(8, 5, 28);
+  --color-card: rgb(255, 255, 255);
+  --color-border: rgb(228, 228, 233);
+  --color-surface: rgb(247, 247, 248);
+  --color-navbar: rgb(15, 10, 58);
+  --color-test: red;
+
+  /* Animations */
+  --animate-fade-down: fade-down 0.8s ease-out 0.2s both;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-montserrat: var(--font-montserrat);
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-nunito bg-background text-foreground antialiased;
+  }
+}
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
