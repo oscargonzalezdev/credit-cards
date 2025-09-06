@@ -1,0 +1,43 @@
+import { CustomerData } from "@/types"
+
+export const AVAILABLE_CUSTOMERS: CustomerData[] = [
+  {
+    id: "ollie-murphree",
+    title: "Mr",
+    email: "ollie.murphree@example.com",
+    firstName: "Ollie",
+    lastName: "Murphree",
+    dateOfBirth: "1970-07-01",
+    employmentStatus: "Full time",
+    annualIncome: "34000",
+    houseNumber: "700",
+    postcode: "BS14 9PR",
+    profileImageUrl: "/images/customers/ollie_murphree.png",
+  },
+  {
+    id: "elizabeth-edmundson",
+    title: "Miss",
+    email: "elizabeth.edmundson@example.com",
+    firstName: "Elizabeth",
+    lastName: "Edmundson",
+    dateOfBirth: "1984-06-29",
+    employmentStatus: "Student",
+    annualIncome: "17000",
+    houseNumber: "177",
+    postcode: "PH12 8UW",
+    profileImageUrl: "/images/customers/elizabeth_edmundson.png",
+  },
+  {
+    id: "trevor-rieck",
+    title: "Mr",
+    email: "trevor.rieck@example.com",
+    firstName: "Trevor",
+    lastName: "Rieck",
+    dateOfBirth: "1990-09-07",
+    employmentStatus: "Part time",
+    annualIncome: "15000",
+    houseNumber: "343",
+    postcode: "TS25 2NF",
+    profileImageUrl: "/images/customers/trevor_rieck.png",
+  },
+] as const
