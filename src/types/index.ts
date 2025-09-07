@@ -19,3 +19,25 @@ export interface CustomerData {
 }
 
 export type NewCustomer = Partial<CustomerData>
+
+export interface OfferDetail {
+  representativeAPR: number
+  durationOfPurchaseRateMonths: number
+  durationOfBalanceRateMonths: number
+  annualFee: number
+  internationalCharges: number
+  minIncome: number
+  minAge: number
+}
+
+export interface CreditCard {
+  id: string
+  provider: string
+  name: string
+  creditAvailable: number
+  pros: string[]
+  cons: string[]
+  imageUrlMedium: string
+  offerDetail: OfferDetail
+  employmentStatus: EmploymentStatus[]
+}
