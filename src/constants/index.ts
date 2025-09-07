@@ -1,4 +1,4 @@
-import { CustomerData } from "@/types"
+import { CustomerData, CreditCard } from "@/types"
 
 export const AVAILABLE_CUSTOMERS: CustomerData[] = [
   {
@@ -39,5 +39,65 @@ export const AVAILABLE_CUSTOMERS: CustomerData[] = [
     houseNumber: "343",
     postcode: "TS25 2NF",
     profileImageUrl: "/images/customers/trevor_rieck.png",
+  },
+] as const
+
+export const AVAILABLE_CARDS: CreditCard[] = [
+  {
+    id: "student-life",
+    provider: "Unknown Provider",
+    name: "Student Life",
+    creditAvailable: 1200,
+    pros: ["No annual fee", "No foreign transaction fees"],
+    cons: ["Only available to students", "You must be at least 18 years old"],
+    imageUrlMedium: "",
+    employmentStatus: ["Student"],
+    offerDetail: {
+      representativeAPR: 18.9,
+      durationOfPurchaseRateMonths: 6,
+      durationOfBalanceRateMonths: 0,
+      annualFee: 0,
+      internationalCharges: 0,
+      minIncome: 0,
+      minAge: 18,
+    },
+  },
+  {
+    id: "anywhere-card",
+    provider: "Unknown Provider",
+    name: "Anywhere Card",
+    creditAvailable: 300,
+    pros: ["No annual fee", "No foreign transaction fees"],
+    cons: ["You must be at least 18 years old"],
+    imageUrlMedium: "",
+    employmentStatus: ["Full time", "Part time", "Student", "Unemployed"],
+    offerDetail: {
+      representativeAPR: 33.9,
+      durationOfPurchaseRateMonths: 0,
+      durationOfBalanceRateMonths: 0,
+      annualFee: 0,
+      internationalCharges: 0,
+      minIncome: 0,
+      minAge: 18,
+    },
+  },
+  {
+    id: "liquid-card",
+    provider: "Unknown Provider",
+    name: "Liquid Card",
+    creditAvailable: 3000,
+    pros: ["No annual fee", "No foreign transaction fees"],
+    cons: ["Your income must be over £16000", "You must be at least 18 years old"],
+    imageUrlMedium: "",
+    employmentStatus: ["Full time", "Part time", "Student", "Unemployed"],
+    offerDetail: {
+      representativeAPR: 33.9,
+      durationOfPurchaseRateMonths: 6,
+      durationOfBalanceRateMonths: 12,
+      annualFee: 0,
+      internationalCharges: 0,
+      minIncome: 16000,
+      minAge: 18,
+    },
   },
 ] as const
