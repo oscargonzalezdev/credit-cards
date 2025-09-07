@@ -56,6 +56,14 @@
   .customer-card {
     @apply bg-surface hover:bg-secondary-muted/50 focus:bg-secondary-muted/50 focus:ring-secondary-muted flex w-full cursor-pointer items-center gap-4 rounded-lg p-4 transition-all focus:ring-2;
   }
+
+  .as-button {
+    @apply bg-primary text-primary-foreground hover:bg-primary-muted hover:text-primary-muted-foreground transition-all duration-300 font-montserrat text-base font-semibold text-nowrap cursor-pointer flex items-center gap-2 rounded-full px-8 py-4 text-center justify-center leading-tight;
+  }
+
+  a {
+    @apply transition-all duration-300 font-montserrat text-base font-semibold text-nowrap cursor-pointer flex items-center gap-2 text-secondary hover:text-secondary-muted-foreground;
+  }
 }
 
 @keyframes fade-down {
