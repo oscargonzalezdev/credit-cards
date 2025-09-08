@@ -4,6 +4,7 @@ import "@/styles/globals.css"
 import { cn } from "@/utils/cn"
 import AppLogo from "@/components/AppLogo"
 import Link from "next/link"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Credit Cards - Eligibility Checker",
@@ -43,8 +44,23 @@ export default function RootLayout({
         </header>
         <main className="relative mx-auto flex w-full max-w-[1200px] flex-col p-6">{children}</main>
         <footer className="w-full bg-white">
-          <div className="mx-auto flex w-full max-w-[1200px] items-center gap-4 p-6">
-            <p>Footer copy goes here</p>
+          <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-4 p-6">
+            <section className="flex-1 space-y-2">
+              <AppLogo id="footer-credit-cards-logo" className="h-5 w-auto" />
+              <article className="text-foreground-muted text-sm font-medium">
+                <p>This is an open source demo app and has no commercial purpose.</p>
+                <Link
+                  href="https://github.com/oscargonzalezdev"
+                  target="_blank"
+                  className="font-nunito hover:text-secondary w-fit text-sm font-medium text-inherit hover:underline"
+                >
+                  Made by Oscar Gonzalez
+                </Link>
+              </article>
+            </section>
+            <Link href="https://github.com/oscargonzalezdev/credit-cards" target="_blank">
+              <Image src="/github_icon.svg" alt="GitHub" width={24} height={24} title="Source Code" />
+            </Link>
           </div>
         </footer>
       </body>

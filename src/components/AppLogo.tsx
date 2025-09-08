@@ -1,8 +1,12 @@
 import React, { SVGProps } from "react"
 
-export default function AppLogo(props: SVGProps<SVGSVGElement>) {
+interface AppLogoProps extends SVGProps<SVGSVGElement> {
+  id?: string
+}
+
+export default function AppLogo({ id = "credit-cards-logo", ...props }: AppLogoProps) {
   return (
-    <svg id="credit-cards-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" role="img" aria-label="Credit Cards Logo" {...props}>
+    <svg id={id} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" role="img" aria-label="Credit Cards Logo" {...props}>
       <g fill="#0f0a3a">
         <path d="M2.59,21.36c0-7.85,5.4-13.1,13.53-13.1,6.3,0,11.23,3.74,12.49,9.43.07.36-.14.58-.5.58h-3.64c-.29,0-.5-.14-.61-.43-1.12-3.42-3.96-5.44-7.74-5.44-5.33,0-8.85,3.6-8.85,8.96s3.53,9,8.85,9c3.74,0,6.62-2.02,7.74-5.4.11-.32.32-.47.61-.47h3.64c.36,0,.58.22.5.58-1.26,5.69-6.19,9.43-12.49,9.43-8.14,0-13.53-5.26-13.53-13.14Z" />
         <path d="M47.59,17.18l-.43,2.7c-.07.36-.29.5-.65.43-.61-.11-1.33-.18-2.05-.18-3.06,0-5.22,2.09-5.22,5.22v8.1c0,.32-.22.54-.54.54h-3.31c-.32,0-.54-.22-.54-.54v-12.09c0-.9-.47-1.33-1.51-1.33-.25,0-.76.07-1.01.11-.36.04-.65-.07-.65-.43v-2.52c0-.32.11-.54.43-.65.68-.22,1.51-.36,2.2-.36,2.09,0,3.64.97,4.21,2.59,1.51-1.66,3.56-2.59,5.98-2.59.94,0,1.98.14,2.7.36.32.11.43.32.4.65Z" />
