@@ -85,6 +85,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={titleId}>Title</label>
           <select
             id={titleId}
+            name="title"
             value={formData.title}
             onChange={(e) => handleInputChange("title", e.target.value)}
             className={errors.title && "error"}
@@ -103,6 +104,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={firstNameId}>First Name</label>
           <input
             id={firstNameId}
+            name="firstName"
             type="text"
             value={formData.firstName}
             onChange={(e) => handleInputChange("firstName", e.target.value)}
@@ -117,6 +119,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={lastNameId}>Last Name</label>
           <input
             id={lastNameId}
+            name="lastName"
             type="text"
             value={formData.lastName}
             onChange={(e) => handleInputChange("lastName", e.target.value)}
@@ -131,6 +134,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={emailId}>Email</label>
           <input
             id={emailId}
+            name="email"
             type="email"
             value={formData.email}
             onChange={(e) => handleInputChange("email", e.target.value)}
@@ -145,6 +149,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={dateOfBirthId}>Date of Birth</label>
           <input
             id={dateOfBirthId}
+            name="dateOfBirth"
             type="date"
             max={new Date().toISOString().split("T")[0]}
             value={formData.dateOfBirth}
@@ -159,6 +164,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={employmentStatusId}>Employment Status</label>
           <select
             id={employmentStatusId}
+            name="employmentStatus"
             value={formData.employmentStatus}
             onChange={(e) => handleInputChange("employmentStatus", e.target.value)}
             className={errors.employmentStatus && "error"}
@@ -177,6 +183,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={annualIncomeId}>Annual Income (£)</label>
           <input
             id={annualIncomeId}
+            name="annualIncome"
             type="number"
             value={formData.annualIncome}
             onChange={(e) => handleInputChange("annualIncome", e.target.value)}
@@ -191,6 +198,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={houseNumberId}>House Number</label>
           <input
             id={houseNumberId}
+            name="houseNumber"
             type="text"
             value={formData.houseNumber}
             onChange={(e) => handleInputChange("houseNumber", e.target.value)}
@@ -205,6 +213,7 @@ export default function CustomerForm({ customer, onSubmit, onBack }: CustomerFor
           <label htmlFor={postcodeId}>Postcode</label>
           <input
             id={postcodeId}
+            name="postcode"
             type="text"
             value={formData.postcode}
             onChange={(e) => handleInputChange("postcode", e.target.value)}
