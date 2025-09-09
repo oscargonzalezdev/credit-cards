@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div className="h-full">
-      <div className={cn("grid h-full grid-cols-1 gap-10 md:grid-cols-2")}>
+      <div className={cn("grid h-full grid-cols-1 gap-14 md:gap-10 md:grid-cols-2")}>
         <div className="flex max-w-[70ch] flex-col items-center justify-center space-y-6 text-center md:items-start md:text-left">
           <h1 className="font-montserrat text-5xl leading-tight font-bold text-balance">Find your perfect credit card</h1>
           <p className="text-foreground-muted space-y-4 text-xl text-balance">
